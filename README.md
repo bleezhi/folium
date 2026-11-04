@@ -50,11 +50,11 @@ cargo clippy --workspace --all-targets -- -D warnings
 
 ### Android app
 
-Open `apps/android/paint` in Android Studio with a compatible Android SDK installed, or build it with Gradle:
+Open `apps/android/paint` in Android Studio with a compatible Android SDK installed, or build it with an installed Gradle 8.x:
 
 ```sh
 cd apps/android/paint
-./gradlew assembleDebug
+gradle assembleDebug
 ```
 
 The Android app is an early scaffold; features will be added incrementally.
