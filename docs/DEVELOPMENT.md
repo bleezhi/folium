@@ -18,7 +18,7 @@ cargo clippy --workspace --all-targets -- -D warnings
 
 ## Android
 
-The first app lives in `apps/android/paint`. Open that directory in Android Studio. The Gradle wrapper is committed so CI and contributors can use a consistent Gradle version.
+The first app lives in `apps/android/paint`. Open that directory in Android Studio. CI uses Gradle 8.x through the Gradle setup action. A Gradle wrapper will be added once its wrapper distribution and checksums are pinned.
 
 ## Scope discipline
 
