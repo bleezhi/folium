@@ -1,0 +1,12 @@
+[package]
+name = "folium-core"
+description = "Shared primitives for the Folium creative engine"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+
+[dependencies]
+serde.workspace = true
+thiserror.workspace = true
+uuid.workspace = true
