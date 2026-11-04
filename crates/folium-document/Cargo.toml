@@ -1,0 +1,14 @@
+[package]
+name = "folium-document"
+description = "Document model and serialization for Folium projects"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+
+[dependencies]
+folium-core = { path = "../folium-core" }
+serde.workspace = true
+serde_json.workspace = true
+thiserror.workspace = true
+uuid.workspace = true
