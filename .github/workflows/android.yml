@@ -1,22 +1,25 @@
-# Folium Paint for Android
+name: Android
 
-The first Android shell for Folium Paint, built with Kotlin and Jetpack Compose.
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
 
-## Current preview
+permissions:
+  contents: read
 
-- Native Compose application shell.
-- Basic touch/stylus drawing canvas.
-- Pressure-aware line width using Android pointer pressure.
-- Color selection and clear-canvas action.
-
-This is a UI prototype, not yet connected to the Rust engine. It does not yet save projects, support layers, or export images.
-
-## Build
-
-Open this directory in Android Studio, or from this directory run:
-
-```sh
-gradle assembleDebug
-```
-
-Requirements: JDK 17 and Android SDK platform 35.
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+      - uses: android-actions/setup-android@v3
+      - uses: gradle/actions/setup-gradle@v4
+      - name: Build debug APK
+        working-directory: apps/android/paint
+        run: gradle assembleDebug
