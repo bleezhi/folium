@@ -42,6 +42,9 @@ mod tests {
 
     #[test]
     fn clamp_limits_all_channels() {
-        assert_eq!(Rgba::new(-1.0, 0.5, 2.0, 1.5).clamped(), Rgba::new(0.0, 0.5, 1.0, 1.0));
+        assert_eq!(
+            Rgba::new(-1.0, 0.5, 2.0, 1.5).clamped(),
+            Rgba::new(0.0, 0.5, 1.0, 1.0)
+        );
     }
 }
