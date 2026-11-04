@@ -1,4 +1,8 @@
-use std::{fs::File, io::{BufReader, BufWriter}, path::Path};
+use std::{
+    fs::File,
+    io::{BufReader, BufWriter},
+    path::Path,
+};
 
 use serde::{Deserialize, Serialize};
 
