@@ -27,10 +27,7 @@ impl Size {
 
     #[must_use]
     pub fn is_valid(self) -> bool {
-        self.width.is_finite()
-            && self.height.is_finite()
-            && self.width > 0.0
-            && self.height > 0.0
+        self.width.is_finite() && self.height.is_finite() && self.width > 0.0 && self.height > 0.0
     }
 }
 
